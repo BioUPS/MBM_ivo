@@ -21,7 +21,7 @@ tablas
 gráficos
 
 ##4. Discusión
-interpretación
+interpretación  
+##5. Conclusiones  
 
-##5. Conclusiones
 ##6. Referencias bibliográficas (inviteme a su grupo en Mendeley) 
