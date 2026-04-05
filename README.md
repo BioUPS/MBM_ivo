@@ -4,12 +4,12 @@ Ejemplo de contenido de *Readme.md* para el proyecto de Omicas 1
 # Proyecto: [Título]
 
 ## Integrantes
-- Nombre 1
-- Nombre 2
-- Nombre 3
+- Nombre 1 :smirk:
+- Nombre 2 :relaxed:
+- Nombre 3 :flushed:
 
 ## Objetivo
-Describir el objetivo del proyecto
+:dna: Describir el objetivo del proyecto
 
 ## Dataset
 SRRXXXXXXX
@@ -30,7 +30,7 @@ bash scripts/pipeline.sh
 ### NOTA: Hasta aquí llega el formato de README para su proyecto, en adelante le coloco información adicional
 <img src="resultados/imagenes/fin.jpg" alt="Fin del formato de README" width="30%">
 
-# DETALLES Y RECOMENDACIONES PARA FORMATO Y MÁS
+# DETALLES Y RECOMENDACIONES PARA FORMATO .md Y MÁS
 El informe será un documentos en Github en formato Markdown (método de escritura, basado en un formato de texto plano).
 Aquí vemos la diferencia entre un procesador de texto (tipo Word) vs Markdown, abiertos en un editor de texto plano. 
 
@@ -175,4 +175,4 @@ flowchart LR
 4. Síntaxis [Markdown](https://markdown.es/sintaxis-markdown/)
 5. Ejercicio para iniciar con [Markdown](https://github.com/skills/communicate-using-markdown)
 6. Adición de [emoticones](https://gist.github.com/rxaviers/7360908) a su página
-7. 6. Lista de [DDBB](https://github.com/BioUPS/Bioinf/blob/main/Proyecto_ejemplo/DB_list.md)
+7. Lista de [DDBB](https://github.com/BioUPS/Bioinf/blob/main/Proyecto_ejemplo/DB_list.md)
