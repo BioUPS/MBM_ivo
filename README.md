@@ -26,15 +26,15 @@ Resumen breve
 ### Scripts
 Si es necesario genere un documento .md adicional o una carpeta para los scripts, si le hace falta (opcional)
 bash scripts/pipeline.sh  
-:stop_sign: 
-### NOTA: Hasta aquí llega el formato de README para su proyecto, en adelante le coloco información adicional
 
+### NOTA: Hasta aquí llega el formato de README para su proyecto, en adelante le coloco información adicional
+<img src="resultados/imagenes/fin.jpg" alt="Fin del formato de README" width="30%">
 
 # DETALLES Y RECOMENDACIONES PARA FORMATO Y MÁS
 El informe será un documentos en Github en formato Markdown (método de escritura, basado en un formato de texto plano).
 Aquí vemos la diferencia entre un procesador de texto (tipo Word) vs Markdown, abiertos en un editor de texto plano. 
 
-![Procesador de texto vs Markdown](MBM_ivo/resultados/imagenes/editor_texto_plano.png)
+![Procesador de texto vs Markdown](resultados/imagenes/editor_texto_plano.png)
 
 Les dejo algunos formatos para el uso :+1: :
 
