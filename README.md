@@ -109,26 +109,45 @@ Visualizamos así:
 Creando un diagrama parcial  de pipeline:
 ````
 ```mermaid
-graph TD;
-    Lecturas_crudas--> Control_calidad;
-    Control_calidad-->FastQC;
-    Control_calidad-->Falco;
-    FastQC -->Trimmomatic;
-    Falco -->Trimmomatic;
-    Trimmomatic --> Ensamblaje;
+flowchart LR
+    A[Datos crudos] --> B[Control de calidad]
+    B --> C[Filtrado]
+    C --> D[Alineamiento]
+    D --> E[Cuantificación]
+    E --> F[Análisis diferencial]
+    F --> G[Visualización]
 ```
 ````
 
 ```mermaid
-graph TD;
-     Lecturas_crudas--> Control_calidad;
-    Control_calidad-->FastQC;
-    Control_calidad-->Falco;
-    FastQC -->Trimmomatic;
-    Falco -->Trimmomatic;
-    Trimmomatic --> Ensamblaje;
+flowchart LR
+    A[Datos crudos] --> B[Control de calidad]
+    B --> C[Filtrado]
+    C --> D[Alineamiento]
+    D --> E[Cuantificación]
+    E --> F[Análisis diferencial]
+    F --> G[Visualización]
 ```
 
+````
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Datos de calidad?}
+    B -- Sí --> C[Procesar datos]
+    B -- No --> D[Limpieza de datos]
+    D --> B
+    C --> E[Resultados]
+```
+````
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Datos de calidad?}
+    B -- Sí --> C[Procesar datos]
+    B -- No --> D[Limpieza de datos]
+    D --> B
+    C --> E[Resultados]
+```
 
 ## LINKS DE INTERES PARA SU INFORME
 1. Proceso para invitar a [colaboradores](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) a su proyecto
