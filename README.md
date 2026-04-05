@@ -149,6 +149,25 @@ flowchart TD
     C --> E[Resultados]
 ```
 
+```mermaid
+flowchart LR
+    A[Datos crudos] --> B[Control de calidad]
+    B --> C[Filtrado]
+    C --> D[Alineamiento]
+    D --> E[Cuantificación]
+    E --> F[Análisis diferencial]
+    F --> G[Visualización]
+
+    %% Colores de nodos con texto y borde negro
+    style A fill:#f9f,stroke:#000,stroke-width:2px,color:#000
+    style B fill:#bbf,stroke:#000,stroke-width:2px,color:#000
+    style C fill:#bfb,stroke:#000,stroke-width:2px,color:#000
+    style D fill:#ffb,stroke:#000,stroke-width:2px,color:#000
+    style E fill:#fbf,stroke:#000,stroke-width:2px,color:#000
+    style F fill:#fbb,stroke:#000,stroke-width:2px,color:#000
+    style G fill:#bff,stroke:#000,stroke-width:2px,color:#000
+```
+
 ## LINKS DE INTERES PARA SU INFORME
 1. Proceso para invitar a [colaboradores](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) a su proyecto
 2. Información sobre los [repositorios](https://docs.github.com/es/repositories)
