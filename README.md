@@ -154,4 +154,4 @@ flowchart TD
 2. Información sobre los [repositorios](https://docs.github.com/es/repositories)
 3. Aprender sobre Github en la [Guía de inicio rápido](https://docs.github.com/es/get-started/start-your-journey)
 4. Adición de [emoticones](https://gist.github.com/rxaviers/7360908) a su página
-5. 
+5. Lista de [DDBB](https://github.com/BioUPS/Bioinf/blob/main/Proyecto_ejemplo/DB_list.md)
