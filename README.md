@@ -172,6 +172,7 @@ flowchart LR
 1. Proceso para invitar a [colaboradores](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) a su proyecto
 2. Información sobre los [repositorios](https://docs.github.com/es/repositories)
 3. Aprender sobre Github en la [Guía de inicio rápido](https://docs.github.com/es/get-started/start-your-journey)
-4.Síntaxis [Markdown](https://markdown.es/sintaxis-markdown/)
-5. Adición de [emoticones](https://gist.github.com/rxaviers/7360908) a su página
-6. 6. Lista de [DDBB](https://github.com/BioUPS/Bioinf/blob/main/Proyecto_ejemplo/DB_list.md)
+4. Síntaxis [Markdown](https://markdown.es/sintaxis-markdown/)
+5. Ejercicio para iniciar con [Markdown](https://github.com/skills/communicate-using-markdown)
+6. Adición de [emoticones](https://gist.github.com/rxaviers/7360908) a su página
+7. 6. Lista de [DDBB](https://github.com/BioUPS/Bioinf/blob/main/Proyecto_ejemplo/DB_list.md)
