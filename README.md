@@ -34,7 +34,7 @@ bash scripts/pipeline.sh
 El informe será un documentos en Github en formato Markdown (método de escritura, basado en un formato de texto plano).
 Aquí vemos la diferencia entre un procesador de texto (tipo Word) vs Markdown, abiertos en un editor de texto plano. 
 
-(![Procesador de texto vs Markdown](/Proyecto_ejemplo/imagenes/editor_texto_plano.png))
+![Procesador de texto vs Markdown](MBM_ivo/resultados/imagenes/editor_texto_plano.png)
 
 Les dejo algunos formatos para el uso :+1: :
 
@@ -129,7 +129,10 @@ graph TD;
     Trimmomatic --> Ensamblaje;
 ```
 
-1. Proceso para invitar a colaboradores [https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository] a su proyecto
-2. Información sobre los repositorios [https://docs.github.com/es/repositories]
-3. Adición de emoticones [https://gist.github.com/rxaviers/7360908] a su página
-4. 
+
+## LINKS DE INTERES PARA SU INFORME
+1. Proceso para invitar a [colaboradores](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) a su proyecto
+2. Información sobre los [repositorios](https://docs.github.com/es/repositories)
+3. Aprender sobre Github en la [Guía de inicio rápido](https://docs.github.com/es/get-started/start-your-journey)
+4. Adición de [emoticones](https://gist.github.com/rxaviers/7360908) a su página
+5. 
