@@ -19,9 +19,10 @@ flujo de análisis
 ### 3. Resultados
 tablas 
 gráficos
+interpretación biológica 
 
 ### 4. Discusión
-interpretación (citar) 
+interpretación biológica (citar) 
 
 ### 5. Conclusiones  
 
