@@ -326,21 +326,10 @@ Archivo HTML interactivo.
 # Paso 9 — Separar colección paired-end
 
 ## Herramienta
-
+MetaPhlAn requiere: colección forward y colección reverse por separado.
 ```text
 Unzip collection
 ```
-
----
-
-# ¿Por qué?
-
-MetaPhlAn requiere:
-
-- colección forward
-- colección reverse
-
-por separado.
 
 ---
 
@@ -374,8 +363,6 @@ Paired-end files
 
 ## Forward paired-end files
 
-Seleccionar:
-
 ```text
 Forward collection
 ```
@@ -384,53 +371,35 @@ Forward collection
 
 ## Reverse paired-end files
 
-Seleccionar:
-
 ```text
 Reverse collection
 ```
 
 ---
 
-## Output for Krona
+## Output for Krona (final antes de opciones adicionales)  
+Genera salida compatible con Krona.
 
 ```text
 YES
 ```
 
-### ¿Por qué?
-
-Genera salida compatible con Krona.
-
 ---
 
-# Salidas importantes de MetaPhlAn
+# Salidas de MetaPhlAn
 
 ## Predicted taxon relative abundances
-
-Tabla con:
-
-- taxones
-- abundancia relativa
-- niveles taxonómicos
+Tabla con: taxones, abundancia relativa, niveles taxonómicos
 
 ---
 
 ## Krona output
-
 Archivo compatible con Krona.
 
 ---
-
 ## BIOM file
-
 Formato estándar usado en microbioma.
-
-Compatible con:
-
-- Qiime
-- mothur
-- otros pipelines microbiológicos
+Compatible con: Qiime, mothur y otros pipelines microbiológicos
 
 ---
 
