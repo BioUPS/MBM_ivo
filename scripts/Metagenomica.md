@@ -1,9 +1,11 @@
 # Guía práctica 
 # Perfilado taxonómico metagenómico (parte 1)
+---
+## Plataforma: Galaxy
 
 ---
 
-# Objetivo del tutorial
+# Objetivo 
 
 Realizar perfilado taxonómico de muestras metagenómicas shotgun utilizando herramientas bioinformáticas en Galaxy.
 
@@ -63,9 +65,6 @@ Detecta microorganismos usando genes específicos altamente conservados.
 - Mayor especificidad taxonómica
 - Menor uso de memoria
 
----
-
-## Plataforma: Galaxy
 
 ---
 
