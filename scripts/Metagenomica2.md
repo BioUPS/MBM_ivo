@@ -211,7 +211,14 @@ rarecurve(
 * Si la curva se estabiliza la cobertura es suficiente
 
 # 5. DIVERSIDAD ALFA
-MÉTRICAS: Shannon, Simpson, Chao1
+Medir diversidad interna.
+
+| Métrica | Significado       |
+| ------- | ----------------- |
+| Shannon | riqueza + equidad |
+| Simpson | dominancia        |
+| Chao1   | riqueza estimada  |
+
 
 ```
 # Transponer matriz
@@ -278,8 +285,30 @@ ggplot(
   ggtitle("Diversidad Shannon")
 ```
 
+### BARPLOT SHANNON
+
+```
+ggplot(
+  alpha_div,
+  aes(
+    x = Sample,
+    y = Shannon,
+    fill = Sample
+  )
+) +
+  geom_bar(
+    stat = "identity"
+  ) +
+  theme_minimal() +
+  ggtitle("Diversidad Shannon")
+```
+
+
 # 7. DIVERSIDAD BETA
-Para comparar comunidades microbianas
+Para comparar composición entre muestras
+Detectar: 
+diferencias ecológicas,
+impacto del enriquecimiento nutricional.  
 ## Bray-Curtis
 ```
 bray <- vegdist(
@@ -300,22 +329,66 @@ bray
 jaccard
 ```
 
-# 8. PCoA
+# 8. HEATMAP
+Visualizar: taxones dominantes,
+diferencias entre muestras.
+
 ```
-pcoa <- cmdscale(
-  bray,
-  eig = TRUE,
-  k = 1
-)
+library(pheatmap)
 ```
 ```
-# Crear dataframe
-pcoa_df <- data.frame(
-  Sample = rownames(counts_t),
-  PC1 = pcoa$points[,1]
+# TOP TAXONES
+
+top_taxa <- head(
+  order(
+    rowMeans(counts),
+    decreasing = TRUE
+  ),
+  20
 )
 
-# Visualizar
-pcoa_df
+############################################################
+# HEATMAP
+
+pheatmap(
+  counts[top_taxa, ],
+  scale = "row",
+  color = colorRampPalette(
+    c("navy", "white", "firebrick3")
+  )(50)
+)
 ```
 
+# TOP 10 TAXONES
+```
+top_taxa_df <- abundance_table %>%
+  mutate(Total = JC1A + JP4D) %>%
+  arrange(desc(Total)) %>%
+  head(10)
+```
+
+### FORMATO LARGO
+```
+top_long <- top_taxa_df %>%
+  pivot_longer(
+    cols = c(JC1A, JP4D),
+    names_to = "Sample",
+    values_to = "Abundance"
+  )
+```
+### GRAFICAR
+```
+ggplot(
+  top_long,
+  aes(
+    x = Sample,
+    y = Abundance,
+    fill = Taxon
+  )
+) +
+  geom_bar(
+    stat = "identity"
+  ) +
+  theme_minimal() +
+  ggtitle("Top 10 Taxones")
+```
