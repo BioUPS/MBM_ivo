@@ -1,7 +1,5 @@
-# Guía práctica de Galaxy
-# Perfilado taxonómico metagenómico con Kraken2, Bracken, Krona, Pavian y MetaPhlAn
-
-Basado en el tutorial GTN: *Taxonomic Profiling and Visualization of Metagenomic Data*
+# Guía práctica 
+# Perfilado taxonómico metagenómico 
 
 ---
 
@@ -768,3 +766,4 @@ Al finalizar el tutorial el estudiante podrá:
 - diferenciar enfoques k-mer y genes marcadores
 - generar perfiles taxonómicos reproducibles en Galaxy
 
+Basado en el tutorial GTN: *Taxonomic Profiling and Visualization of Metagenomic Data*
