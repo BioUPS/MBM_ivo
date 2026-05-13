@@ -85,6 +85,11 @@ Metagenomics
 ---
 
 # Paso 2 — Importar datos
+* Las muestras provienen de ambientes acuáticos/desérticos en México.  
+* Fueron analizados mediante WGS (Whole Genome Shotgun sequencing)
+* Los reads ya fueron preprocesados
+* JC1A contiene: MUESTRA DE SEDIMENTO
+* JP4D contiene: MUESTRA DE AGUA con enriquecimiento químico (NH4NO3 + KH2PO12).
 
 ## Archivos del tutorial
 
@@ -460,6 +465,7 @@ Al finalizar se podrá:
 - diferenciar enfoques k-mer y genes marcadores
 
 ### History compartido en Galaxy [Link](https://usegalaxy.org/u/ivovaca/h/metagenomica-p1)
+### La metadata se encuentra en el presente repositorio: data/metag 
 
 ## Bibliografía
 * Sophia Hampe, Bérénice Batut, Paul Zierep, Taxonomic Profiling and Visualization of Metagenomic Data (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/microbiome/tutorials/taxonomic-profiling/tutorial.html Online; accessed Wed May 13 2026
