@@ -12,15 +12,8 @@ Descargar desde Galaxy:
 
 # Instalar paquetes principales
 ```
-############################################################
 # METAGENÓMICA EN R
-# Instalación y carga de paquetes
-# Versión estable recomendada para análisis ecológico
-############################################################
-
-############################
 # 1. INSTALAR CRAN
-############################
 
 install.packages(c(
   "tidyverse",
@@ -33,17 +26,13 @@ install.packages(c(
   "CVXR"
 ))
 
-############################
 # 2. INSTALAR BIOCONDUCTOR
-############################
 
 if (!requireNamespace("BiocManager", quietly = TRUE)) {
   install.packages("BiocManager")
 }
 
-############################
 # 3. INSTALAR PAQUETES BIOC
-############################
 
 BiocManager::install(c(
   "phyloseq",
