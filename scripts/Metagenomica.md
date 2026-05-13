@@ -1,5 +1,5 @@
 # Guía práctica 
-# Perfilado taxonómico metagenómico 
+# Perfilado taxonómico metagenómico (parte 1)
 
 ---
 
