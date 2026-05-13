@@ -183,17 +183,14 @@ YES
 ## Select a Kraken2 database
 
 ```text
-PlusPF
+Prebuilt Refseq indexes: PlusPF 
 ```
 ---
 
-# Salidas de Kraken2
-## 1. Classification output: Archivo con clasificación por lectura individual.
-NO usar en Bracken.
-
----
-
-## 2. Report output: Archivo agregado taxonómico.
+# Salidas de Kraken2  
+## 1. Classification output: Archivo con clasificación por lectura individual.  
+NO usar en Bracken.  
+## 2. Report output: Archivo agregado taxonómico.  
 Debe usarse para: Brackeny Krona
 ---
 
@@ -220,59 +217,30 @@ Seleccionar:
 ```text
 Report output of Kraken
 ```
-
-### IMPORTANTE
-
-NO seleccionar:
-
-```text
-Classification output
-```
-
 ---
 
 ## Select a kmer distribution
 
 ```text
-PlusPF
+Prebuilt Refseq indexes: PlusPF 
 ```
-
-### Regla importante
-
 Debe ser EXACTAMENTE la misma base de datos usada en Kraken2.
 
 ---
 
-## Level
+## Level 
+Define el nivel taxonómico de reestimación.
 
 ```text
 Species
 ```
-
-### ¿Qué hace?
-
-Define el nivel taxonómico de reestimación.
-
-Opciones comunes:
-
-| Nivel | Significado |
-|---|---|
-| Species | especies |
-| Genus | géneros |
-| Family | familias |
-
 ---
 
-## Produce Kraken-Style Bracken report
-
+## Produce Kraken-Style Bracken report  
+Genera un archivo compatible con herramientas de visualización.
 ```text
 YES
 ```
-
-### ¿Por qué?
-
-Genera un archivo compatible con herramientas de visualización.
-
 ---
 
 # PARTE 4 — Conversión para Krona
