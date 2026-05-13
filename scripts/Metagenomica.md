@@ -83,16 +83,14 @@ Metagenomics
 ```
 
 ---
-
-# Paso 2 — Importar datos
+# Paso 2 — Data
 * Las muestras provienen de ambientes acuáticos/desérticos en México.  
 * Fueron analizados mediante WGS (Whole Genome Shotgun sequencing)
 * Los reads ya fueron preprocesados
 * JC1A contiene: MUESTRA DE SEDIMENTO
 * JP4D contiene: MUESTRA DE AGUA con enriquecimiento químico (NH4NO3 + KH2PO12).
 
-## Archivos del tutorial
-
+## Importar archivos a la plataforma
 
 [JC1A_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R1.fastqsanger.gz)  
 [JC1A_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R2.fastqsanger.gz)  
