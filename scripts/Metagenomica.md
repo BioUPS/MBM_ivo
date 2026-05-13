@@ -85,16 +85,12 @@ Metagenomics
 
 ## Archivos del tutorial
 
-```text
-JC1A_R1.fastqsanger.gz
-JC1A_R2.fastqsanger.gz
-JP4D_R1.fastqsanger.gz
-JP4D_R2.fastqsanger.gz
-```
 
-## Método recomendado
+[JC1A_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R1.fastqsanger.gz)
+[JC1A_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R2.fastqsanger.gz)
+[JP4D_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R1.fastqsanger.gz)
+[JP4D_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R2.fastqsanger.gz)
 
-### Upload → Paste/Fetch Data
 
 Pegar los links o cargar los archivos.
 
