@@ -173,26 +173,11 @@ Define el porcentaje mínimo de k-mers que deben coincidir con la base de datos.
 ```
 ---
 
-# Create Report
-
-## Print a report with aggregate counts/clade to file
-
+## Print a report with aggregate counts/clade to file 
+:star: Este parámetro genera el archivo REPORT necesario para: Bracken y Krona
 ```text
 YES
 ```
-
-### MUY IMPORTANTE
-
-Este parámetro genera el archivo REPORT necesario para:
-
-- Bracken
-- Krona
-- Pavian
-
-Si NO se activa:
-
-❌ Bracken fallará.
-
 ---
 
 ## Select a Kraken2 database
@@ -200,41 +185,16 @@ Si NO se activa:
 ```text
 PlusPF
 ```
-
-### ¿Qué contiene?
-
-- bacterias
-- arqueas
-- virus
-- hongos
-- protozoos
-- humano
-- plasmid
-
 ---
 
-# Salidas importantes de Kraken2
-
-Kraken2 genera:
-
-## 1. Classification output
-
-Archivo con clasificación por lectura individual.
-
+# Salidas de Kraken2
+## 1. Classification output: Archivo con clasificación por lectura individual.
 NO usar en Bracken.
 
 ---
 
-## 2. Report output
-
-Archivo agregado taxonómico.
-
-Debe usarse para:
-
-- Bracken
-- Krona
-- Pavian
-
+## 2. Report output: Archivo agregado taxonómico.
+Debe usarse para: Brackeny Krona
 ---
 
 # PARTE 3 — Bracken
