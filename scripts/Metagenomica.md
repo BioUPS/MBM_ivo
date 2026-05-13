@@ -65,7 +65,7 @@ Detecta microorganismos usando genes específicos altamente conservados.
 
 ---
 
-# PARTE 1 — Preparación de Galaxy
+## Plataforma: Galaxy
 
 ---
 
@@ -73,17 +73,10 @@ Detecta microorganismos usando genes específicos altamente conservados.
 
 ## Acción
 
-En Galaxy:
-
-- Click en **+** para crear una nueva History
-- Renombrar la historia
-
-## Recomendación
-
 Nombre sugerido:
 
 ```text
-Metagenomics_Taxonomic_Profiling
+Metagenomics
 ```
 
 ---
