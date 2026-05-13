@@ -57,6 +57,7 @@ BiocManager::install(c(
 ### Carga de librerias
 ```
 library(tidyverse)
+library(dplyr)
 library(vegan)
 library(microbiome)
 library(phyloseq)
@@ -75,13 +76,14 @@ Esta matriz será la base para: diversidad, estadística, ecología microbiana.
 
 
 ```
-#Creamos copias
+# MATRIZ DE ABUNDANCIA
+# Crear copias de trabajo
+
 jc1a <- JC1A
 jp4d <- JP4D
 
-############################################################
+
 # Visualizar estructura
-############################################################
 
 head(jc1a)
 head(jp4d)
@@ -89,20 +91,15 @@ head(jp4d)
 str(jc1a)
 str(jp4d)
 
-############################################################
 # Seleccionar columnas importantes
-############################################################
-
 # Ver nombres de columnas
 
 colnames(jc1a)
 colnames(jp4d)
 
-############################################################
 # Normalmente Bracken contiene:
 # name
 # new_est_reads
-############################################################
 
 jc1a_sub <- jc1a %>%
   select(name, new_est_reads)
@@ -110,16 +107,19 @@ jc1a_sub <- jc1a %>%
 jp4d_sub <- jp4d %>%
   select(name, new_est_reads)
 
-############################################################
+
 # Renombrar columnas
-############################################################
+
 
 colnames(jc1a_sub) <- c("Taxon", "JC1A")
 colnames(jp4d_sub) <- c("Taxon", "JP4D")
+colnames(jc1a_sub)
+colnames(jp4d_sub)
+
 
 ############################################################
 # Construir matriz de abundancia
-############################################################
+
 
 abundance_table <- full_join(
   jc1a_sub,
@@ -127,21 +127,15 @@ abundance_table <- full_join(
   by = "Taxon"
 )
 
-############################################################
 # Reemplazar NA por 0
-############################################################
 
 abundance_table[is.na(abundance_table)] <- 0
 
-############################################################
 # Ver tabla final
-############################################################
 
 head(abundance_table)
 
-############################################################
 # Guardar matriz
-############################################################
 
 write.csv(
   abundance_table,
