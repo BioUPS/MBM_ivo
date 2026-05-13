@@ -73,8 +73,7 @@ library(ANCOMBC)
 
 # MATRIZ DE ABUNDANCIA
 Esta matriz será la base para: diversidad, estadística, ecología microbiana.
-
-
+Se extraeran columnas importantes, porque interesa: nombre taxonómico y abundancia estimada  
 ```
 # MATRIZ DE ABUNDANCIA
 # Crear copias de trabajo
@@ -143,9 +142,17 @@ write.csv(
   row.names = FALSE
 )
 ```
+Guardar la matriz de abundacia, ya que reproducible para:
+R,
+Python,
+Colab,
+publicaciones.
 
 # NORMALIZACIÓN
 Busca convertir counts a abundancia relativa
+Permite comparar: 
+muestras con distinto número de reads,
+composición microbiana real.
 ```
 # NORMALIZACIÓN
 # Crear matriz numérica
@@ -190,8 +197,8 @@ write.csv(
 ```
 
 # 4. RAREFACCIÓN
-Para evaluar profundidad de secuenciación
-
+Para evaluar profundidad y cobertura de secuenciación
+Determina si el esfuerzo de secuenciación fue suficiente.
 ```
 rarecurve(
   t(counts),
@@ -201,7 +208,7 @@ rarecurve(
   label = TRUE
 )
 ```
-
+* Si la curva se estabiliza la cobertura es suficiente
 
 # 5. DIVERSIDAD ALFA
 MÉTRICAS: Shannon, Simpson, Chao1
@@ -245,13 +252,70 @@ alpha_div <- data.frame(
 ############################################################
 # Visualizar diversidad alfa
 alpha_div
-
-############################################################
 # Guardar resultados
 write.csv(
   alpha_div,
   "alpha_diversity.csv",
   row.names = FALSE
 )
+```
+
+
+# 6. VISUALIZACIÓN DIVERSIDAD ALFA
+# Boxplot Shannon
+
+```
+ggplot(
+  alpha_div,
+  aes(
+    x = Sample,
+    y = Shannon,
+    fill = Sample
+  )
+) +
+  geom_boxplot() +
+  theme_minimal() +
+  ggtitle("Diversidad Shannon")
+```
+
+# 7. DIVERSIDAD BETA
+Para comparar comunidades microbianas
+## Bray-Curtis
+```
+bray <- vegdist(
+  counts_t,
+  method = "bray"
+)
+```
+## Jaccard
+```
+jaccard <- vegdist(
+  counts_t,
+  method = "jaccard"
+)
+```
+# Visualizar matrices de distancia
+```
+bray
+jaccard
+```
+
+# 8. PCoA
+```
+pcoa <- cmdscale(
+  bray,
+  eig = TRUE,
+  k = 1
+)
+```
+```
+# Crear dataframe
+pcoa_df <- data.frame(
+  Sample = rownames(counts_t),
+  PC1 = pcoa$points[,1]
+)
+
+# Visualizar
+pcoa_df
 ```
 
