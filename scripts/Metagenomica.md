@@ -314,7 +314,7 @@ Output of Krakentools
 
 ## Resultado
 
-Archivo HTML interactivo.
+Archivo HTML interactivo, descargue el archivo HTML para visualizarlo mejor. 
 
 ---
 
@@ -430,104 +430,6 @@ Seleccionar:
 ```text
 Krona output of MetaPhlAn
 ```
-
----
-
-# Consideraciones biológicas importantes
-
----
-
-# Kraken2
-
-## Ventajas
-
-- rápido
-- alta sensibilidad
-- detecta muchos taxones
-
-## Desventajas
-
-- más falsos positivos
-- depende mucho de la base de datos
-
----
-
-# MetaPhlAn
-
-## Ventajas
-
-- mayor especificidad
-- menos falsos positivos
-- mejor resolución biológica
-
-## Desventajas
-
-- puede detectar menos diversidad
-- depende de genes marcadores
-
----
-
-# Buenas prácticas
-
----
-
-## 1. Revisar outputs correctamente
-
-Muchos errores ocurren por seleccionar archivos incorrectos.
-
----
-
-## 2. Mantener consistencia de bases de datos
-
-Kraken2 y Bracken deben usar la misma base.
-
----
-
-## 3. Verificar paired-end
-
-Confirmar:
-
-```text
-R1 ↔ R2
-```
-
-correctamente emparejados.
-
----
-
-## 4. Revisar reads no clasificadas
-
-Porcentajes altos pueden indicar:
-
-- contaminación
-- organismos no presentes en la base
-- baja calidad
-- secuencias novedosas
-
----
-
-# Flujo resumido
-
-```text
-FASTQ
-↓
-Paired collection
-↓
-Kraken2
-↓
-Report output
-↓
-Bracken
-↓
-Krakentools
-↓
-Krona / Pavian
-↓
-MetaPhlAn
-↓
-Krona
-```
-
 ---
 
 # Herramientas utilizadas
@@ -538,14 +440,18 @@ Krona
 | Bracken | Reestimación de abundancia |
 | Krakentools | Conversión de reportes |
 | Krona | Visualización interactiva |
-| Pavian | Exploración comparativa |
 | MetaPhlAn | Perfilado basado en genes marcadores |
 
 ---
 
 # Resultado esperado del pipeline
+- Se generó el perfil de la comunidad a partir de datos del microbioma.
+- Kraken2 o MetaPhlAn asignan etiquetas taxonómicas a dos conjuntos de datos de muestras del microbioma
+- Krona permite visualizar los resultados
+- La herramienta de clasificación taxonómica a utilizar depende de los datos
 
-Al finalizar el tutorial el estudiante podrá:
+
+Al finalizar se podrá:
 
 - ejecutar clasificación taxonómica
 - interpretar outputs de Kraken2
@@ -553,6 +459,5 @@ Al finalizar el tutorial el estudiante podrá:
 - visualizar comunidades microbianas
 - comparar muestras microbiológicas
 - diferenciar enfoques k-mer y genes marcadores
-- generar perfiles taxonómicos reproducibles en Galaxy
 
 Basado en el tutorial GTN: *Taxonomic Profiling and Visualization of Metagenomic Data*
