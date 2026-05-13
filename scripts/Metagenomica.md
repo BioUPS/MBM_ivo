@@ -69,7 +69,8 @@ Detecta microorganismos usando genes específicos altamente conservados.
 
 ---
 
-# PARTE 1 — Preparación de los datos
+:bookmark: 1 
+# Preparación de los datos
 
 ---
 # Paso 1 — Crear una nueva historia
@@ -134,7 +135,8 @@ Metagenomic_Pairs
 
 ---
 
-# PARTE 2 — Kraken2
+:bookmark: 2 
+# Kraken2
 
 ---
 
@@ -194,7 +196,8 @@ NO usar en Bracken.
 Debe usarse para: Brackeny Krona
 ---
 
-# PARTE 3 — Bracken
+:bookmark: 3
+# Bracken
 
 ---
 
@@ -242,8 +245,8 @@ Genera un archivo compatible con herramientas de visualización.
 YES
 ```
 ---
-
-# PARTE 4 — Conversión para Krona
+:bookmark: 4
+# Conversión para Krona
 
 ---
 
@@ -274,8 +277,8 @@ Report collection of Kraken
 Convierte el reporte de Kraken2 al formato requerido por Krona.
 
 ---
-
-# PARTE 5 — Krona
+:bookmark: 5
+# Krona
 
 ---
 
@@ -315,85 +318,8 @@ Archivo HTML interactivo.
 
 ---
 
-# PARTE 6 — Pavian
-
----
-
-# Paso 8 — Ejecutar Pavian
-
-## Herramienta
-
-```text
-Pavian
-```
-
----
-
-# Configuración
-
-## Kraken and MetaPhlAn-style reports
-
-Seleccionar:
-
-```text
-Report collection of Kraken
-```
-
----
-
-# Uso de Pavian
-
-Cuando el dataset aparezca naranja:
-
-1. Abrir Pavian
-2. Use data on server
-3. Seleccionar muestras
-4. Read selected directories
-5. Save table
-
----
-
-# Visualizaciones importantes
-
-## Results Overview
-
-Resumen general:
-
-- reads clasificadas
-- bacterias
-- virus
-- eucariotas
-- reads no clasificadas
-
----
-
-## Sample
-
-Diagrama Sankey.
-
-Permite explorar:
-
-- dominios
-- filos
-- clases
-- órdenes
-- especies
-
----
-
-## Comparison
-
-Comparación entre muestras.
-
-Permite analizar:
-
-- abundancias relativas
-- diversidad taxonómica
-- diferencias entre tratamientos
-
----
-
-# PARTE 7 — MetaPhlAn
+:bookmark: 6
+# MetaPhlAn
 
 ---
 
