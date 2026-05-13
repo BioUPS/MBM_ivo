@@ -76,3 +76,47 @@ jp4d <- read.delim(
 head(jc1a)
 head(jp4d)
 ```
+
+## construir_matriz.R
+```
+name
+new_est_reads
+```
+```
+# Seleccionar columnas relevantes
+
+jc1a_sub <- jc1a %>%
+  select(name, new_est_reads)
+
+jp4d_sub <- jp4d %>%
+  select(name, new_est_reads)
+
+# Renombrar columnas
+
+colnames(jc1a_sub) <- c("Taxon", "JC1A")
+colnames(jp4d_sub) <- c("Taxon", "JP4D")
+
+# Unir tablas
+
+abundance_table <- full_join(
+  jc1a_sub,
+  jp4d_sub,
+  by = "Taxon"
+)
+
+# Reemplazar NA por 0
+
+abundance_table[is.na(abundance_table)] <- 0
+
+# Ver tabla
+
+head(abundance_table)
+
+# Guardar
+
+write.csv(
+  abundance_table,
+  "results/abundance_matrix.csv",
+  row.names = FALSE
+)
+```
