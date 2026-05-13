@@ -381,3 +381,6 @@ ggplot(
   theme_minimal() +
   ggtitle("Top 10 Taxones")
 ```
+
+# Data
+Las matrices generadas en RStudio se encuentran en el presente repositorio: data/metag 
