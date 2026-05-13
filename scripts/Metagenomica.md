@@ -459,6 +459,8 @@ Al finalizar se podrá:
 - comparar muestras microbiológicas
 - diferenciar enfoques k-mer y genes marcadores
 
+### History compartido en Galaxy [Link](https://usegalaxy.org/u/ivovaca/h/metagenomica-p1)
+
 ## Bibliografía
 * Sophia Hampe, Bérénice Batut, Paul Zierep, Taxonomic Profiling and Visualization of Metagenomic Data (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/microbiome/tutorials/taxonomic-profiling/tutorial.html Online; accessed Wed May 13 2026
 * Hiltemann, Saskia, Rasche, Helena et al., 2023 Galaxy Training: A Powerful Framework for Teaching! PLOS Computational Biology 10.1371/journal.pcbi.1010752
