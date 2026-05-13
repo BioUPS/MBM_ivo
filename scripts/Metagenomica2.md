@@ -15,7 +15,6 @@ Descargar desde Galaxy:
 install.packages(c(
   "tidyverse",
   "vegan",
-  "microbiome",
   "phyloseq",
   "ggplot2",
   "pheatmap",
@@ -34,8 +33,14 @@ BiocManager::install(c(
   "phyloseq"
 ))
 ```
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
-###CArga de librerias
+BiocManager::install("microbiome")
+```
+
+### Carga de librerias
 ```
 library(tidyverse)
 library(vegan)
