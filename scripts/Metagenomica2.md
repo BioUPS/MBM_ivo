@@ -144,46 +144,114 @@ write.csv(
 )
 ```
 
-## construir_matriz.R
+# NORMALIZACIÓN
+Busca convertir counts a abundancia relativa
 ```
-name
-new_est_reads
-```
-```
-# Seleccionar columnas relevantes
+# NORMALIZACIÓN
+# Crear matriz numérica
 
-jc1a_sub <- jc1a %>%
-  select(name, new_est_reads)
+counts <- abundance_table[, -1]
 
-jp4d_sub <- jp4d %>%
-  select(name, new_est_reads)
+# Asignar nombres de taxones como rownames
 
-# Renombrar columnas
+rownames(counts) <- abundance_table$Taxon
 
-colnames(jc1a_sub) <- c("Taxon", "JC1A")
-colnames(jp4d_sub) <- c("Taxon", "JP4D")
+counts <- as.matrix(counts)
 
-# Unir tablas
+mode(counts) <- "numeric"
 
-abundance_table <- full_join(
-  jc1a_sub,
-  jp4d_sub,
-  by = "Taxon"
+# Calcular abundancia relativa
+############################################################
+
+relative_abundance <- sweep(
+  counts,
+  2,
+  colSums(counts),
+  FUN = "/"
 )
 
-# Reemplazar NA por 0
+# Convertir a porcentaje
+############################################################
 
-abundance_table[is.na(abundance_table)] <- 0
+relative_abundance <- relative_abundance * 100
 
-# Ver tabla
+############################################################
+# Visualizar abundancias relativas
+############################################################
 
-head(abundance_table)
+head(relative_abundance)
 
-# Guardar
+#Guardar
 
 write.csv(
-  abundance_table,
-  "results/abundance_matrix.csv",
+  relative_abundance,
+  "relative_abundance.csv"
+)
+```
+
+# 4. RAREFACCIÓN
+Para evaluar profundidad de secuenciación
+
+```
+rarecurve(
+  t(counts),
+  step = 100,
+  cex = 0.8,
+  col = c("steelblue", "darkred"),
+  label = TRUE
+)
+```
+
+
+# 5. DIVERSIDAD ALFA
+MÉTRICAS: Shannon, Simpson, Chao1
+
+```
+# Transponer matriz
+counts_t <- t(counts)
+
+############################################################
+# Shannon
+
+shannon <- diversity(
+  counts_t,
+  index = "shannon"
+)
+
+############################################################
+# Simpson
+
+simpson <- diversity(
+  counts_t,
+  index = "simpson"
+)
+
+############################################################
+# Chao1
+
+
+chao1 <- estimateR(counts_t)[2, ]
+
+############################################################
+# Crear dataframe
+
+alpha_div <- data.frame(
+  Sample = rownames(counts_t),
+  Shannon = shannon,
+  Simpson = simpson,
+  Chao1 = chao1
+)
+
+############################################################
+# Visualizar diversidad alfa
+alpha_div
+
+############################################################
+# Guardar resultados
+write.csv(
+  alpha_div,
+  "alpha_diversity.csv",
   row.names = FALSE
 )
 ```
+
