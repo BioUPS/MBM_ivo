@@ -69,6 +69,9 @@ Detecta microorganismos usando genes específicos altamente conservados.
 
 ---
 
+# PARTE 1 — Preparación de los datos
+
+---
 # Paso 1 — Crear una nueva historia
 
 ## Acción
@@ -86,11 +89,10 @@ Metagenomics
 ## Archivos del tutorial
 
 
-[JC1A_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R1.fastqsanger.gz)
-[JC1A_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R2.fastqsanger.gz)
-[JP4D_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R1.fastqsanger.gz)
-[JP4D_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R2.fastqsanger.gz)
-
+[JC1A_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R1.fastqsanger.gz)  
+[JC1A_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JC1A_R2.fastqsanger.gz)  
+[JP4D_R1.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R1.fastqsanger.gz)  
+[JP4D_R2.fastqsanger.gz](https://zenodo.org/record/7871630/files/JP4D_R2.fastqsanger.gz)  
 
 Pegar los links o cargar los archivos.
 
@@ -98,13 +100,10 @@ Pegar los links o cargar los archivos.
 
 # Paso 3 — Crear colección paired-end
 
-## ¿Por qué?
-
+## ¿Por qué? 
 Kraken2 y MetaPhlAn trabajan mejor con lecturas paired-end organizadas como colección.
 
----
-
-## Procedimiento
+### Procedimiento
 
 1. Seleccionar los 4 datasets
 2. Click en:
@@ -152,19 +151,13 @@ Kraken2
 # Configuración recomendada
 
 ## Single or paired reads
+Los datos corresponden a lecturas paired-end.
 
 ```text
 Paired
 ```
 
-### ¿Por qué?
-
-Los datos corresponden a lecturas paired-end.
-
----
-
 ## Collection of paired reads
-
 Seleccionar:
 
 ```text
@@ -174,26 +167,10 @@ Metagenomic_Pairs
 ---
 
 ## Confidence
-
+Define el porcentaje mínimo de k-mers que deben coincidir con la base de datos.
 ```text
 0.1
 ```
-
-### ¿Qué significa?
-
-Define el porcentaje mínimo de k-mers que deben coincidir con la base de datos.
-
-### Interpretación
-
-| Valor | Resultado |
-|---|---|
-| Bajo | Más sensibilidad |
-| Alto | Más especificidad |
-
-### Recomendación
-
-0.1 es un valor balanceado para metagenómica.
-
 ---
 
 # Create Report
