@@ -10,7 +10,7 @@
 | abundance_matrix.csv   | abundancias absolutas |
 | relative_abundance.csv | abundancias relativas |
 | alpha_diversity.csv    | diversidad alfa       |
-* Data en este repositorio
+
 
 ### Crear manualmente metadata, llamada "metadata.csv" con la siguiente información:
 ```
@@ -59,11 +59,12 @@ sns.set_style("whitegrid")
 
 # SUBIR ARCHIVOS:
 
-✅ abundance_matrix.csv
-✅ relative_abundance.csv
-✅ alpha_diversity.csv
-✅ metadata.csv
+✅ abundance_matrix.csv      
+✅ relative_abundance.csv    
+✅ alpha_diversity.csv   
+✅ metadata.csv (*) 
 
+* Data en este repositorio (* = excepto)
 
 # LEER ARCHIVOS
 
