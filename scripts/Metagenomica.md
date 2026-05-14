@@ -319,7 +319,8 @@ Output of Krakentools
 Archivo HTML interactivo, descargue el archivo HTML para visualizarlo mejor. 
 
 ---
-
+* Desde aquí puede continuar con la segunda parte
+  
 :bookmark: 6
 # MetaPhlAn
 
